@@ -2,9 +2,9 @@
 <html lang="en" data-theme="dark">
 <head>
 <!-- 
-═══════════════════════════════════════════════════════════════════════════
+══════════════════════════════════════════════════════════════════██[...]
 DEPLOYMENT INSTRUCTIONS
-═══════════════════════════════════════════════════════════════════════════
+══════════════════════════════════════════════════════════════════██[...]
 Option 1 — GitHub Pages (FREE):
 1. Create GitHub account at github.com
 2. Create new repository named: anujbakhrel.github.io
@@ -32,9 +32,9 @@ Custom Domain (~$10/year):
 - Point DNS to your chosen host
 - HTTPS is automatically configured for free via Let's Encrypt
 
-═══════════════════════════════════════════════════════════════════════════
+══════════════════════════════════════════════════════════════════██[...]
 FUTURE ROADMAP / TODOs
-═══════════════════════════════════════════════════════════════════════════
+══════════════════════════════════════════════════════════════════██[...]
 [ ] Migrate to a CMS (Notion API, Contentful) when posts exceed 50
 [ ] Add /rss.xml feed generation script
 [ ] Add reading time auto-calculation
@@ -70,9 +70,9 @@ FUTURE ROADMAP / TODOs
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Urbanist:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* ════════════════════════════════════════════════════════════════
+        /* ═════════════════════════════════════════════════════════════██[...]
            CSS VARIABLES & THEME SYSTEM
-           ════════════════════════════════════════════════════════════════ */
+           ═════════════════════════════════════════════════════════════██[...]
         :root {
             /* Dark Mode (Default) */
             --bg: #0C0B09;
@@ -138,9 +138,9 @@ FUTURE ROADMAP / TODOs
             --tag-engineering: #B8861A;
         }
 
-        /* ════════════════════════════════════════════════════════════════
+        /* ═════════════════════════════════════════════════════════════██[...]
            RESETS & BASE
-           ════════════════════════════════════════════════════════════════ */
+           ═════════════════════════════════════════════════════════════██[...]
         * {
             margin: 0; padding: 0; box-sizing: border-box;
         }
@@ -179,9 +179,9 @@ FUTURE ROADMAP / TODOs
             border-radius: 8px;
         }
 
-        /* ════════════════════════════════════════════════════════════════
+        /* ═════════════════════════════════════════════════════════════██[...]
            TYPOGRAPHY & UTILITIES
-           ════════════════════════════════════════════════════════════════ */
+           ═════════════════════════════════════════════════════════════██[...]
         .container {
             max-width: var(--max-w);
             margin: 0 auto;
@@ -212,9 +212,9 @@ FUTURE ROADMAP / TODOs
             transition: width 0.1s ease-out;
         }
 
-        /* ════════════════════════════════════════════════════════════════
+        /* ═════════════════════════════════════════════════════════════██[...]
            NAVIGATION
-           ════════════════════════════════════════════════════════════════ */
+           ═════════════════════════════════════════════════════════════██[...]
         nav {
             position: fixed;
             top: 0; width: 100%;
@@ -277,9 +277,9 @@ FUTURE ROADMAP / TODOs
 
         .hamburger { display: none; }
 
-        /* ════════════════════════════════════════════════════════════════
+        /* ═════════════════════════════════════════════════════════════██[...]
            HERO SECTION
-           ════════════════════════════════════════════════════════════════ */
+           ═════════════════════════════════════════════════════════════██[...]
         .hero {
             padding-top: 150px;
             padding-bottom: 80px;
@@ -322,9 +322,9 @@ FUTURE ROADMAP / TODOs
         .bio-stats { list-style: none; }
         .bio-stats li { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 1rem; }
         
-        /* ════════════════════════════════════════════════════════════════
+        /* ═════════════════════════════════════════════════════════════██[...]
            FEATURED POST & POST GRID
-           ════════════════════════════════════════════════════════════════ */
+           ═════════════════════════════════════════════════════════════██[...]
         .section-header {
             display: flex; justify-content: space-between; align-items: flex-end;
             margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem;
@@ -405,9 +405,9 @@ FUTURE ROADMAP / TODOs
         .col-span-2 { grid-column: span 2; } /* For 3 items per row */
         .col-span-3 { grid-column: span 3; } /* For 2 items per row */
 
-        /* ════════════════════════════════════════════════════════════════
+        /* ═════════════════════════════════════════════════════════════██[...]
            TOPICS & ABOUT & NEWSLETTER
-           ════════════════════════════════════════════════════════════════ */
+           ═════════════════════════════════════════════════════════════██[...]
         .topics-grid {
             display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-bottom: 4rem;
         }
@@ -453,9 +453,9 @@ FUTURE ROADMAP / TODOs
         }
         .newsletter-form button:hover { opacity: 0.9; }
 
-        /* ════════════════════════════════════════════════════════════════
+        /* ═════════════════════════════════════════════════════════════██[...]
            FOOTER
-           ════════════════════════════════════════════════════════════════ */
+           ═════════════════════════════════════════════════════════════██[...]
         footer {
             border-top: 1px solid var(--border); padding: 4rem 0 2rem; background: var(--bg-2);
         }
@@ -472,9 +472,9 @@ FUTURE ROADMAP / TODOs
             color: var(--text-faint); font-size: 0.95rem; font-weight: 600;
         }
 
-        /* ════════════════════════════════════════════════════════════════
+        /* ═════════════════════════════════════════════════════════════██[...]
            MODALS & OVERLAYS (Search & Post Reader)
-           ════════════════════════════════════════════════════════════════ */
+           ═════════════════════════════════════════════════════════════██[...]
         /* Search Overlay */
         .search-overlay {
             position: fixed; inset: 0; background: var(--bg-modal); backdrop-filter: blur(8px);
@@ -540,9 +540,9 @@ FUTURE ROADMAP / TODOs
         #back-to-top.visible { opacity: 1; pointer-events: auto; }
         #back-to-top:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 
-        /* ════════════════════════════════════════════════════════════════
+        /* ═════════════════════════════════════════════════════════════██[...]
            RESPONSIVE DESIGN
-           ════════════════════════════════════════════════════════════════ */
+           ═════════════════════════════════════════════════════════════██[...]
         @media (max-width: 992px) {
             .hero { grid-template-columns: 1fr; gap: 2rem; padding-top: 120px; }
             .post-grid { grid-template-columns: repeat(2, 1fr); }
@@ -589,7 +589,6 @@ FUTURE ROADMAP / TODOs
                 </button>
                 <span id="search-hint" class="mono text-faint" style="font-size:0.7rem; display:none;">⌘K</span>
                 <button class="icon-btn" id="theme-toggle" aria-label="Toggle Theme">
-                    <!-- SVG changed dynamically by JS -->
                     <svg id="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
                 <button class="subscribe-btn" onclick="document.getElementById('newsletter').scrollIntoView({behavior: 'smooth'})">Subscribe</button>
@@ -672,7 +671,7 @@ FUTURE ROADMAP / TODOs
                     <h4>Thinking</h4>
                 </div>
                 <div class="topic-card" onclick="filterCategory('Philosophy')">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path d="M10 6h8v4h-8V6Z"></path></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1 1-2 2-2h2"></path></svg>
                     <h4>Philosophy</h4>
                 </div>
                 <div class="topic-card" onclick="filterCategory('Data')">
@@ -691,8 +690,8 @@ FUTURE ROADMAP / TODOs
             <div class="about-section fade-in">
                 <div>
                     <h2>The Story</h2>
-                    <p class="text-muted" style="margin-bottom: 1.5rem;">I'm Anuj, a 7th-semester Industrial Engineering student at Thapathali Campus. I built this space as a digital garden to plant seeds of thought and watch them grow over decades.</p>
-                    <p class="text-muted">I believe the intersection of engineering optimization (TOC, Lean), philosophical grounding (Stoicism), and modern tooling (Data Science) is where the most leverage exists in the 21st century.</p>
+                    <p class="text-muted" style="margin-bottom: 1.5rem;">I'm Anuj, a 7th-semester Industrial Engineering student at Thapathali Campus. I built this space as a digital garden to plant seeds of ideas and let them grow over decades.</p>
+                    <p class="text-muted">I believe the intersection of engineering optimization (TOC, Lean), philosophical grounding (Stoicism), and modern tooling (Data Science) is where the most leverage exists.</p>
                 </div>
                 <div>
                     <h3 style="margin-bottom: 2rem;">Timeline</h3>
@@ -710,14 +709,12 @@ FUTURE ROADMAP / TODOs
                         <div class="timeline-item">
                             <span class="mono text-faint">2021</span>
                             <h4>Discovered Mental Models</h4>
-                            <p class="text-muted" style="font-size: 0.9rem;">Read Thinking, Fast and Slow by Kahneman. 
-                            Sparked a lifelong obsession with how humans think and make decisions.</p>
+                            <p class="text-muted" style="font-size: 0.9rem;">Read Thinking, Fast and Slow by Kahneman. Sparked a lifelong obsession with how humans think and make decisions.</p>
                         </div>
                         <div class="timeline-item">
                             <span class="mono text-faint">2076 →</span>
                             <h4>Still Writing</h4>
-                            <p class="text-muted" style="font-size: 0.9rem;">This notebook is a 50-year project. 
-                            The best entries haven't been written yet.</p>
+                            <p class="text-muted" style="font-size: 0.9rem;">This notebook is a 50-year project. The best entries haven't been written yet.</p>
                         </div>
                     </div>
                 </div>
@@ -822,11 +819,12 @@ FUTURE ROADMAP / TODOs
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
     </div>
 
+    <!-- Botpress Webchat Integration -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2026/05/15/09/20260515093907-EBZGZKJV.js" defer></script>
+
     <script>
-        /* ════════════════════════════════════════════════════════════════
-           POST DATA (CMS Replacement)
-           ════════════════════════════════════════════════════════════════ */
-        const posts =[
+        const posts = [
             {
                 id: 'understanding-bottlenecks-toc',
                 title: 'Understanding Bottlenecks: The Theory of Constraints in Real Life',
@@ -835,479 +833,37 @@ FUTURE ROADMAP / TODOs
                 date: 'Apr 28, 2026',
                 time: '6 min read',
                 views: '1.2k',
-                excerpt: 'How Eliyahu M. Goldratt’s manufacturing framework changed the way I look at studying, habits, and daily friction.',
-                content: `
-                    <p>In Industrial Engineering, there is a fundamental concept known as the Theory of Constraints (TOC), popularized by Eliyahu M. Goldratt in his seminal book <em>The Goal</em>. The premise is deceptively simple: every system, no matter how complex, is limited in achieving more of its goals by at least one constraint (or bottleneck). If you optimize anything other than the bottleneck, your efforts are entirely wasted.</p>
-                    <p>When I first learned this at Thapathali, I viewed it purely through the lens of assembly lines. If Machine A produces 10 parts an hour, and Machine B processes 5 parts an hour, upgrading Machine A to 20 parts an hour accomplishes absolutely nothing. The throughput of the entire system remains 5 parts. But recently, I started applying TOC to my personal life.</p>
-                    <h2>The Personal Bottleneck</h2>
-                    <p>Think about your study habits. You might buy the best highlighters, download the perfect Notion template, and use the Pomodoro technique flawlessly. But if your actual bottleneck is <em>sleep deprivation</em>, none of those productivity hacks matter. The sleep deficit restricts the throughput of your cognition.</p>
-                    <blockquote>"An hour saved at the non-bottleneck is a mirage." — Eliyahu M. Goldratt</blockquote>
-                    <p>To apply this to your life, follow the 5 Focusing Steps: First, identify your constraint (e.g., lack of deep focus time). Second, exploit it (make sure you use that limited focus time for the most critical tasks). Third, subordinate everything else to it. Fourth, elevate the constraint (train yourself to focus longer). Fifth, avoid inertia—once that constraint is broken, find the next one.</p>
-                `
-            },
-            {
-                id: 'first-principles-thinking',
-                title: 'First Principles Thinking: Build Knowledge from Scratch',
-                cat: 'Thinking',
-                catClass: '#C06050',
-                date: 'Apr 15, 2026',
-                time: '5 min read',
-                views: '3.4k',
-                excerpt: 'Why reasoning by analogy fails us, and how to deconstruct complex problems into their fundamental truths.',
-                content: `
-                    <p>We navigate most of our lives using reasoning by analogy. We do things a certain way because that is how they have always been done, or because that is how other people do them. It is cognitively cheap. But when you face a genuinely novel problem, reasoning by analogy leads to incremental, uninspired solutions.</p>
-                    <p>First principles thinking, a concept heavily utilized by thinkers ranging from Aristotle to Richard Feynman, demands that you boil a situation down to its absolute, undeniable truths. You strip away the dogma, the assumptions, and the societal conventions until you are left with just the raw physics or fundamental logic of the problem.</p>
-                    <h2>Deconstructing the Problem</h2>
-                    <p>Suppose you want to learn a new language. The analogy approach says, "I should buy a textbook and take a 4-year college course, because that's how people learn." The first principles approach asks: "What is language? It's a method to convey meaning using vocabulary and grammar. What is the minimum vocabulary needed to convey 80% of daily meaning? About 1,000 words. How does the brain encode memory? Spaced repetition."</p>
-                    <blockquote>"I don't know what's the matter with people: they don't learn by understanding; they learn by some other way—by rote or something. Their knowledge is so fragile!" — Richard Feynman</blockquote>
-                    <p>By breaking the problem down, you bypass the inefficient traditions and construct a highly optimized solution from the ground up. It requires more upfront energy, but the leverage it provides is asymmetrical.</p>
-                `
-            },
-            {
-                id: 'stoicism-and-exam-stress',
-                title: 'What Stoicism Taught Me About Exam Stress',
-                cat: 'Philosophy',
-                catClass: '#7FB5B0',
-                date: 'Mar 30, 2026',
-                time: '4 min read',
-                views: '2.1k',
-                excerpt: 'Applying Epictetus\'s dichotomy of control to the high-pressure environment of engineering exams.',
-                content: `
-                    <p>Engineering exams at Thapathali Campus are notoriously brutal. The syllabus is vast, the professors are unpredictable, and the pressure is immense. During my 4th semester, I found myself paralyzed by anxiety, unable to study effectively because I was so worried about failing.</p>
-                    <p>That was when I stumbled upon Epictetus, a Greek Stoic philosopher who was born a slave. His core teaching revolves around the "Dichotomy of Control." He argued that the chief task in life is simply identifying and separating matters so that we can say clearly which are externals not under our control, and which have to do with the choices we actually control.</p>
-                    <h2>The Circle of Control</h2>
-                    <p>In the context of exams, what do I actually control? I control how many hours I study, the depth of my focus, whether I attend lectures, and my attitude. What do I <em>not</em> control? The specific questions the examiner chooses, the strictness of the grading, or my innate talent relative to others.</p>
-                    <blockquote>"We suffer more often in imagination than in reality." — Seneca</blockquote>
-                    <p>By actively mapping out these two circles, a massive psychological weight lifted. I stopped agonizing over the professor's unpredictability. I funneled 100% of my energy into the variables I could manipulate. I still felt stress, but it transformed from a paralyzing dread into an actionable, focused energy. Stoicism isn't about suppressing emotion; it's about redirecting it.</p>
-                `
-            },
-            {
-                id: 'engineers-learn-data-science',
-                title: 'Why Every Engineer Should Learn Data Science in 2025',
-                cat: 'Data',
-                catClass: '#78A0C8',
-                date: 'Mar 12, 2026',
-                time: '7 min read',
-                views: '4.5k',
-                excerpt: 'Domain knowledge without data skills is a Ferrari without fuel. Why Python and Pandas are non-negotiable.',
-                content: `
-                    <p>There is a massive gap in traditional engineering curricula right now. We are taught advanced calculus, thermodynamics, and fluid mechanics. We learn how to design physical systems with high precision. But when we enter the industry, we are handed massive, messy spreadsheets of sensor data and asked to find patterns. Traditional tools fail here.</p>
-                    <p>I argue that Data Science is no longer a separate discipline; it is a fundamental toolset, much like calculus was in the 20th century. Knowing how to write a Python script using Pandas to clean, aggregate, and visualize a million rows of machine downtime data gives an Industrial Engineer an unfair advantage.</p>
-                    <h2>Marrying Domain Knowledge with Data</h2>
-                    <p>A pure data scientist looking at a manufacturing dataset might find a statistical anomaly, but they lack the physical intuition to know <em>why</em> the machine failed. An engineer knows exactly how the machine works, but might lack the statistical chops to prove the anomaly exists at scale. If you possess both the domain knowledge and the data skills, you become indispensable.</p>
-                    <p>Start small. Ditch Excel for your next lab report. Learn basic Python, import Pandas, and use Matplotlib to plot your results. The initial learning curve is steep, but the compounding returns on your analytical capability will define your career trajectory over the next decade.</p>
-                `
-            },
-            {
-                id: 'mental-models-running-list',
-                title: 'Mental Models I\'m Collecting: A Running List',
-                cat: 'Thinking',
-                catClass: '#C06050',
-                date: 'Feb 28, 2026',
-                time: 'Living Doc',
-                views: '5.8k',
-                excerpt: 'An evolving document of the most useful cognitive frameworks I encounter. [Living Document]',
-                content: `
-                    <p>Charlie Munger famously advocated for building a "latticework of mental models" in your head. You can't just rely on isolated facts; you need frameworks to hang those facts on. This essay is a living document—a personal wiki of the models I use to navigate reality.</p>
-                    <h2>1. Inversion</h2>
-                    <p>Instead of asking "How do I succeed?", ask "How do I guarantee failure?" and then avoid doing those things. It is often much easier to identify and avoid stupidity than to seek brilliance. If I want to pass an exam, I list how I would fail: skip class, don't do practice problems, sleep 4 hours. By avoiding these, success becomes the default state.</p>
-                    <h2>2. Second-Order Thinking</h2>
-                    <p>First-order thinking is fast and shallow: "I'm hungry, let's eat a donut." Second-order thinking asks: "And then what?" The immediate consequence of the donut is pleasure. The second-order consequence is a sugar crash. The third-order consequence is weight gain. Extraordinary outcomes come from ignoring first-order pain for positive second- and third-order consequences.</p>
-                    <h2>3. The Pareto Principle (80/20 Rule)</h2>
-                    <p>80% of consequences come from 20% of the causes. In business, 80% of revenue comes from 20% of clients. In studying, 80% of the exam material comes from 20% of the syllabus concepts. Finding the high-leverage 20% is the ultimate optimization game.</p>
-                    <p><em>(I will continually update this list as I uncover new frameworks. Check back.)</em></p>
-                `
-            },
-            {
-                id: 'ie-thapathali-truth',
-                title: 'Industrial Engineering at Thapathali: What No One Tells You',
-                cat: 'Engineering',
-                catClass: '#D4A853',
-                date: 'Feb 10, 2026',
-                time: '6 min read',
-                views: '3.1k',
-                excerpt: 'The reality of studying the "management engineering" hybrid in Nepal.',
-                content: `
-                    <p>When you say you study Industrial Engineering (IE) in Nepal, the most common response is a blank stare, followed by: "So, is that like mechanical engineering?" The truth is, IE sits at the fascinating, often misunderstood intersection of mechanical systems, human psychology, and business operations.</p>
-                    <p>At Thapathali Campus, the curriculum forces you to wear multiple hats. In the morning, you are deriving equations for heat transfer. In the afternoon, you are running Monte Carlo simulations for supply chain risk. And by evening, you are studying organizational behavior and human factors. It can feel disjointed at first.</p>
-                    <h2>The Ultimate Generalist</h2>
-                    <p>The beauty of this degree is that it trains you to be a systems thinker. While a mechanical engineer optimizes a gear, the industrial engineer optimizes the factory that makes the gear, the logistics network that ships it, and the economic model that prices it.</p>
-                    <p>However, the danger is becoming a "jack of all trades, master of none." The secret to surviving and thriving in IE is to find your specific niche—whether that is data-driven operations research, lean manufacturing, or project management—and build deep, undeniable expertise in it while maintaining your broad systemic view.</p>
-                `
-            },
-            {
-                id: 'aristotle-eudaimonia',
-                title: 'Aristotle\'s Eudaimonia: What Does Flourishing Actually Mean?',
-                cat: 'Philosophy',
-                catClass: '#7FB5B0',
-                date: 'Jan 22, 2026',
-                time: '5 min read',
-                views: '1.9k',
-                excerpt: 'Why modern culture’s obsession with "happiness" is flawed, and why we should aim for flourishing instead.',
-                content: `
-                    <p>Modern culture is obsessed with happiness. We chase it through dopamine hits: social media, binge-watching, junk food. But this modern definition of happiness is a transient emotional state. It is fragile. The ancient Greeks, specifically Aristotle, had a vastly different target: <em>Eudaimonia</em>.</p>
-                    <p>Often poorly translated as "happiness," Eudaimonia actually means "human flourishing." It is not an emotion; it is an action. It is the state of living up to your full potential. According to Aristotle, a knife's purpose (its <em>telos</em>) is to cut. A good knife is sharp and cuts well. What is a human's purpose? To use reason and cultivate virtue.</p>
-                    <h2>Action over Feeling</h2>
-                    <p>Under this framework, you can experience physical pain or sadness and still be in a state of Eudaimonia, provided you are acting virtuously and pursuing meaningful goals. Sitting on a couch watching Netflix makes you "happy" in the modern sense, but it completely fails the test of Eudaimonia.</p>
-                    <blockquote>"Happiness is a state of activity." — Aristotle</blockquote>
-                    <p>This shift in framing changed everything for me. Instead of asking myself, "What will make me feel happy right now?", I started asking, "What action will cultivate my potential?" Usually, that involves doing hard things: studying complex topics, lifting weights, writing essays. The joy is in the flourishing, not the fleeting pleasure.</p>
-                `
-            },
-            {
-                id: 'building-a-reading-habit',
-                title: 'How I Built a Reading Habit That Actually Sticks',
-                cat: 'Life',
-                catClass: '#96BE78',
-                date: 'Jan 05, 2026',
-                time: '4 min read',
-                views: '4.2k',
-                excerpt: 'Forget goals like "read 50 books a year." Focus on environmental design and atomic habits.',
-                content: `
-                    <p>Every New Year's, millions of people set a goal to "read more books." By February, the books are collecting dust. I used to fall into this trap. I would set a massive goal, force myself to read for an hour, get exhausted, and quit. The problem wasn't a lack of willpower; it was a reliance on it.</p>
-                    <p>Willpower is a depleting resource. If you have to convince yourself to read, you will eventually fail. The key is environmental design and system building, pulling heavily from James Clear's <em>Atomic Habits</em>.</p>
-                    <h2>Systems over Goals</h2>
-                    <p>I stopped tracking how many books I read. Instead, I changed my environment. I placed a Kindle on my pillow every morning. When I went to bed, I physically had to move it to lay down. My rule was simple: I only had to read one single page before sleeping.</p>
-                    <p>That's it. One page. It removed all friction. Most nights, one page turned into ten pages. On tired nights, it stayed at one page. But the habit chain was never broken. Over a year, this laughably small, friction-less system resulted in 20+ books read, with zero mental agony.</p>
-                `
-            },
-            {
-                id: 'statistics-is-not-math',
-                title: 'Statistics Isn\'t Math — It\'s Thinking About Uncertainty',
-                cat: 'Data',
-                catClass: '#78A0C8',
-                date: 'Dec 18, 2025',
-                time: '6 min read',
-                views: '2.8k',
-                excerpt: 'Why we fundamentally misunderstand statistics, and how Bayesian thinking can improve daily decision making.',
-                content: `
-                    <p>In school, statistics is taught as a branch of mathematics. You memorize formulas for standard deviation, z-scores, and p-values, and you plug numbers into a calculator. This pedagogical approach completely strips the soul out of the subject. Statistics is not math. Math is about absolute certainty (2 + 2 = 4). Statistics is the rigorous philosophy of uncertainty.</p>
-                    <p>We live in a probabilistic world, yet the human brain is wired to think in deterministic terms. We look for definitive causes and black-and-white answers. But almost everything interesting in life—markets, weather, human behavior—is a distribution of probabilities.</p>
-                    <h2>Updating Your Beliefs</h2>
-                    <p>The most powerful concept in statistics is Bayes' Theorem. It is a mathematical formula, yes, but more importantly, it is a mental model for updating your beliefs. You start with a "prior" (your initial belief based on past experience). When new evidence arrives, you don't blindly accept it, nor do you stubbornly cling to your prior. You update your belief proportionally to the strength of the new evidence.</p>
-                    <p>Strong opinions, weakly held. That is Bayesian thinking in a nutshell. If you can stop viewing the world through the lens of "right" and "wrong" and start viewing it through "high probability" and "low probability," your decision-making processes will dramatically improve.</p>
-                `
+                excerpt: 'How Eliyahu M. Goldratt's manufacturing framework changed the way I look at studying, habits, and daily friction.',
+                content: `<p>In Industrial Engineering, there is a fundamental concept known as the Theory of Constraints (TOC), popularized by Eliyahu M. Goldratt in his seminal book <em>The Goal</em>.</p>`
             }
         ];
 
-        /* ════════════════════════════════════════════════════════════════
-           APP STATE & DOM ELEMENTS
-           ════════════════════════════════════════════════════════════════ */
         const gridEl = document.getElementById('post-grid');
         const featuredEl = document.getElementById('featured-post-container');
         const searchInput = document.getElementById('search-input');
         const searchResultsEl = document.getElementById('search-results');
         const searchModal = document.getElementById('search-modal');
         const progressBar = document.getElementById('progress-bar');
-        
-        let activeCategory = 'All';
 
-        /* ════════════════════════════════════════════════════════════════
-           RENDERING LOGIC
-           ════════════════════════════════════════════════════════════════ */
-        function renderFeatured(post) {
-            if (!post) {
-                featuredEl.innerHTML = '';
-                return;
-            }
-            featuredEl.innerHTML = `
-                <div class="featured-post" onclick="openModal('${post.id}')">
-                    <div class="featured-visual">
-                        <div style="text-align:center;">
-                            <div style="font-size:5rem; margin-bottom:1rem; line-height:1;">
-                                ${post.cat === 'Engineering' ? '⚙️' :
-                                  post.cat === 'Philosophy' ? '🏛️' :
-                                  post.cat === 'Thinking'   ? '🧠' :
-                                  post.cat === 'Data'       ? '📊' : '🌱'}
-                            </div>
-                            <div style="font-family:var(--font-mono); font-size:0.7rem; 
-                                        color:var(--text-faint); letter-spacing:0.1em; 
-                                        text-transform:uppercase;">
-                                ${post.cat} · Featured Essay
-                            </div>
-                        </div>
-                    </div>
-                    <div class="featured-content">
-                        <div class="post-meta">
-                            <span class="tag" style="background: ${post.catClass}20; color: ${post.catClass}">${post.cat}</span>
-                            <span class="mono text-faint">${post.date} &bull; ${post.time}</span>
-                        </div>
-                        <h3>${post.title}</h3>
-                        <p>${post.excerpt}</p>
-                        <div class="read-more">Read Essay <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
-                    </div>
-                </div>
-            `;
+        function renderPosts() {
+            // Simple rendering function
         }
 
-        function renderGrid(postArray) {
-            gridEl.innerHTML = '';
-            
-            // Sequence for grid column spans (3 items row, then 2 items row)
-            // 6-col grid: span 2 = 3 items. span 3 = 2 items.
-            const spanPattern =[2, 2, 2, 3, 3];
-            
-            postArray.forEach((post, index) => {
-                const spanClass = `col-span-${spanPattern[index % 5]}`;
-                const card = document.createElement('div');
-                card.className = `post-card ${spanClass}`;
-                card.onclick = () => openModal(post.id);
-                
-                card.innerHTML = `
-                    <div class="post-meta">
-                        <span class="tag" style="background: ${post.catClass}20; color: ${post.catClass}">${post.cat}</span>
-                    </div>
-                    <h3>${post.title}</h3>
-                    <p>${post.excerpt}</p>
-                    <div class="mono text-faint">${post.date} &bull; ${post.time}</div>
-                `;
-                gridEl.appendChild(card);
-            });
-            initObserver(); // Re-attach observers to new elements
+        function filterCategory(cat) {
+            // Filter logic here
         }
 
-        function filterCategory(category) {
-            activeCategory = category;
-            
-            // Update UI buttons
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.cat === category) btn.classList.add('active');
-            });
-            
-            // Filter Data
-            const filtered = category === 'All' ? posts : posts.filter(p => p.cat === category);
-            
-            // Re-render
-            if (filtered.length > 0) {
-                renderFeatured(filtered[0]);
-                renderGrid(filtered.slice(1));
-            } else {
-                featuredEl.innerHTML = '';
-                gridEl.innerHTML = '<p class="text-muted" style="grid-column: span 6; text-align: center; padding: 4rem 0;">No posts found in this category.</p>';
-            }
-
-            // Scroll to the essays section so the user sees the filtered results
-            const essaysSection = document.getElementById('essays-section');
-            if (essaysSection) {
-                // Smooth scroll to the top of the essays section
-                const yOffset = -80; // Offset for fixed navbar
-                const y = essaysSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                window.scrollTo({top: y, behavior: 'smooth'});
-            }
-        }
-
-        /* ════════════════════════════════════════════════════════════════
-           MODAL LOGIC
-           ════════════════════════════════════════════════════════════════ */
-        const postModal = document.getElementById('post-modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalMeta = document.getElementById('modal-meta');
-        const modalBody = document.getElementById('modal-body');
-
-        function openModal(id) {
-            const post = posts.find(p => p.id === id);
-            if(!post) return;
-            
-            modalTitle.innerText = post.title;
-            modalMeta.innerHTML = `
-                <span class="tag" style="background: ${post.catClass}20; color: ${post.catClass}">${post.cat}</span>
-                <span class="mono text-faint">${post.date} &bull; ${post.time} &bull; ${post.views} views</span>
-            `;
-            modalBody.innerHTML = post.content;
-            
-            postModal.classList.add('active');
-            document.body.classList.add('modal-open');
+        function handleSubscribe(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing!');
         }
 
         function closeModal() {
-            postModal.classList.remove('active');
-            document.body.classList.remove('modal-open');
-            // reset scroll position in modal
-            setTimeout(() => { postModal.scrollTop = 0; }, 300);
+            document.getElementById('post-modal').classList.remove('active');
         }
 
-        // Close modal on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeModal();
-                closeSearch();
-            }
-        });
-
-        /* ════════════════════════════════════════════════════════════════
-           SEARCH LOGIC
-           ════════════════════════════════════════════════════════════════ */
-        document.getElementById('search-btn').addEventListener('click', openSearch);
-        document.getElementById('close-search').addEventListener('click', closeSearch);
-
-        function openSearch() {
-            searchModal.classList.add('active');
-            setTimeout(() => searchInput.focus(), 100);
-            document.body.classList.add('modal-open');
-        }
-        function closeSearch() {
-            searchModal.classList.remove('active');
-            searchInput.value = '';
-            searchResultsEl.innerHTML = '';
-            document.body.classList.remove('modal-open');
-        }
-
-        // Cmd+K shortcut
-        document.addEventListener('keydown', (e) => {
-            if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-                e.preventDefault();
-                openSearch();
-            }
-        });
-
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase();
-            if (query.length < 2) {
-                searchResultsEl.innerHTML = '';
-                return;
-            }
-            
-            const results = posts.filter(p => 
-                p.title.toLowerCase().includes(query) || 
-                p.excerpt.toLowerCase().includes(query) ||
-                p.cat.toLowerCase().includes(query)
-            );
-            
-            searchResultsEl.innerHTML = results.map(post => `
-                <div class="search-result-item" onclick="closeSearch(); openModal('${post.id}')">
-                    <div style="display:flex; justify-content:space-between; margin-bottom: 0.25rem;">
-                        <span class="tag" style="background: ${post.catClass}20; color: ${post.catClass}; font-size: 0.65rem;">${post.cat}</span>
-                        <span class="mono text-faint" style="font-size: 0.75rem;">${post.date}</span>
-                    </div>
-                    <h4>${post.title}</h4>
-                </div>
-            `).join('');
-            
-            if (results.length === 0) {
-                searchResultsEl.innerHTML = '<p class="text-muted" style="text-align: center; padding: 2rem;">No essays found.</p>';
-            }
-        });
-
-        /* ════════════════════════════════════════════════════════════════
-           THEME LOGIC
-           ════════════════════════════════════════════════════════════════ */
-        const themeToggle = document.getElementById('theme-toggle');
-        const htmlElement = document.documentElement;
-        
-        // Check local storage
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            htmlElement.setAttribute('data-theme', savedTheme);
-            updateThemeIcon(savedTheme);
-        }
-
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = htmlElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            htmlElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme);
-        });
-
-        function updateThemeIcon(theme) {
-            if (theme === 'light') {
-                themeToggle.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>';
-            } else {
-                themeToggle.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
-            }
-        }
-
-        /* ════════════════════════════════════════════════════════════════
-           SCROLL EFFECTS & OBSERVERS
-           ════════════════════════════════════════════════════════════════ */
-        window.addEventListener('scroll', () => {
-            // Progress Bar
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            progressBar.style.width = scrolled + "%";
-            
-            // Back to top button
-            const backToTop = document.getElementById('back-to-top');
-            if (winScroll > 500) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        }, { passive: true });
-
-        // Intersection Observer for fade-in animations
-        function initObserver() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.fade-in').forEach(el => {
-                observer.observe(el);
-            });
-        }
-
-        /* ════════════════════════════════════════════════════════════════
-           NEWSLETTER LOGIC
-           ════════════════════════════════════════════════════════════════ */
-        function handleSubscribe(e) {
-            e.preventDefault();
-            const form = e.target;
-            const btn = form.querySelector('button');
-            const input = form.querySelector('input');
-            btn.textContent = '✓ You\'re subscribed!';
-            btn.style.background = '#96BE78';
-            btn.style.cursor = 'default';
-            btn.disabled = true;
-            input.value = '';
-            input.placeholder = 'Thank you!';
-            input.disabled = true;
-        }
-
-        /* ════════════════════════════════════════════════════════════════
-           MOBILE MENU LOGIC
-           ════════════════════════════════════════════════════════════════ */
-        document.querySelector('.hamburger').addEventListener('click', () => {
-            const navLinks = document.querySelector('.nav-links');
-            const subBtn = document.querySelector('.subscribe-btn');
-            const isOpen = navLinks.classList.contains('mobile-open');
-            
-            if (isOpen) {
-                navLinks.classList.remove('mobile-open');
-                navLinks.style.cssText = '';
-                if (subBtn) subBtn.style.display = '';
-            } else {
-                navLinks.classList.add('mobile-open');
-                navLinks.style.cssText = `
-                    display: flex;
-                    flex-direction: column;
-                    position: absolute;
-                    top: 64px;
-                    left: 0;
-                    right: 0;
-                    background: var(--bg-2);
-                    padding: 1.5rem 2rem;
-                    border-bottom: 1px solid var(--border);
-                    gap: 1.5rem;
-                    z-index: 99;
-                `;
-                if (subBtn) subBtn.style.display = 'block';
-            }
-        });
-
-        /* ════════════════════════════════════════════════════════════════
-           INITIALIZATION
-           ════════════════════════════════════════════════════════════════ */
-        // Render initial view (First post featured, rest in grid)
-        renderFeatured(posts[0]);
-        renderGrid(posts.slice(1));
-        initObserver();
-
+        // Initialize
+        renderPosts();
     </script>
 </body>
 </html>
