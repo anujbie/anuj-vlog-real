@@ -33,14 +33,6 @@ Custom Domain (~$10/year):
 - HTTPS is automatically configured for free via Let's Encrypt
 
 ═══════════════════════════════════════════════════════════════════════════
-MONETIZATION INTEGRATION INSTRUCTIONS
-═══════════════════════════════════════════════════════════════════════════
-- Google AdSense: Apply at google.com/adsense. Replace 'ca-pub-XXXXXXXX' 
-  in the script tags below with your actual Publisher ID. Uncomment script.
-- Buy Me a Coffee: Add script `<script data-name="BMC-Widget" ...>` to footer.
-- Analytics: Consider Plausible.io (privacy) or Google Analytics 4.
-
-═══════════════════════════════════════════════════════════════════════════
 FUTURE ROADMAP / TODOs
 ═══════════════════════════════════════════════════════════════════════════
 [ ] Migrate to a CMS (Notion API, Contentful) when posts exceed 50
@@ -72,13 +64,10 @@ FUTURE ROADMAP / TODOs
     <meta name="twitter:title" content="Anuj Bakhrel | Open Notebook">
     <meta name="twitter:description" content="Documenting learnings in Industrial Engineering, Mental Models, Data Science, and Philosophy.">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Urbanist & Open Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-    <!-- AdSense Script Placeholder (Uncomment and replace ID when ready) -->
-    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Urbanist:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
     <style>
         /* ════════════════════════════════════════════════════════════════
@@ -92,9 +81,12 @@ FUTURE ROADMAP / TODOs
             --bg-4: #252320;
             --bg-modal: rgba(12, 11, 9, 0.95);
             --bg-nav: rgba(12, 11, 9, 0.85);
-            --text: #E8E0D0;
-            --text-muted: #9A9080;
-            --text-faint: #5A5448;
+            
+            /* Increased Contrast for Dark Mode */
+            --text: #FFFFFF; 
+            --text-muted: #D1CFC7;
+            --text-faint: #A39F96;
+            
             --accent: #D4A853;
             --accent-dim: #A07828;
             --accent-glow: rgba(212,168,83,0.12);
@@ -108,9 +100,9 @@ FUTURE ROADMAP / TODOs
             --tag-life: #96BE78;
             --tag-engineering: #D4A853;
             
-            /* Typography */
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Outfit', sans-serif;
+            /* Typography Updated */
+            --font-heading: 'Urbanist', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
             
             /* Layout */
@@ -127,9 +119,12 @@ FUTURE ROADMAP / TODOs
             --bg-4: #DFD8C8;
             --bg-modal: rgba(250, 248, 244, 0.95);
             --bg-nav: rgba(250, 248, 244, 0.85);
-            --text: #1C1A17;
-            --text-muted: #5A5448;
-            --text-faint: #8A8478;
+            
+            /* Increased Contrast for Light Mode */
+            --text: #000000;
+            --text-muted: #222222;
+            --text-faint: #444444;
+            
             --accent: #B8861A;
             --accent-dim: #8A6414;
             --accent-glow: rgba(184,134,26,0.12);
@@ -152,8 +147,9 @@ FUTURE ROADMAP / TODOs
         body {
             background-color: var(--bg);
             color: var(--text);
-            font-family: var(--font-sans);
-            line-height: 1.6;
+            font-family: var(--font-body);
+            font-size: 1.05rem; /* Increased base font size */
+            line-height: 1.7; /* Increased line height for readability */
             transition: background-color 0.3s ease, color 0.3s ease;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
@@ -162,8 +158,8 @@ FUTURE ROADMAP / TODOs
             overflow: hidden;
         }
         h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-serif);
-            font-weight: 600;
+            font-family: var(--font-heading);
+            font-weight: 700; /* Bolder headings */
             line-height: 1.2;
             color: var(--text);
         }
@@ -193,7 +189,7 @@ FUTURE ROADMAP / TODOs
         }
         .text-muted { color: var(--text-muted); }
         .text-faint { color: var(--text-faint); }
-        .mono { font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: -0.02em; }
+        .mono { font-family: var(--font-mono); font-size: 0.9rem; letter-spacing: -0.02em; }
         .accent { color: var(--accent); }
         
         .fade-in {
@@ -235,9 +231,9 @@ FUTURE ROADMAP / TODOs
             align-items: center;
         }
         .logo {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 800; /* Extra bold logo */
             letter-spacing: -0.02em;
         }
         .logo span { color: var(--accent); }
@@ -247,8 +243,9 @@ FUTURE ROADMAP / TODOs
             align-items: center;
         }
         .nav-links a {
-            font-size: 0.95rem;
-            font-weight: 500;
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 600;
             color: var(--text-muted);
             transition: color 0.2s;
         }
@@ -268,10 +265,11 @@ FUTURE ROADMAP / TODOs
         .subscribe-btn {
             background: var(--accent);
             color: var(--bg);
-            padding: 0.5rem 1rem;
+            font-family: var(--font-heading);
+            padding: 0.5rem 1.2rem;
             border-radius: 4px;
-            font-weight: 600;
-            font-size: 0.9rem;
+            font-weight: 700;
+            font-size: 1rem;
             cursor: pointer;
             transition: opacity 0.2s;
         }
@@ -292,11 +290,12 @@ FUTURE ROADMAP / TODOs
         }
         .hero-title {
             font-size: clamp(3rem, 5vw, 4.5rem);
+            font-weight: 800; /* Extra bold hero title */
             margin-bottom: 1.5rem;
             letter-spacing: -0.03em;
         }
         .hero-desc {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--text-muted);
             max-width: 500px;
             margin-bottom: 2rem;
@@ -319,9 +318,9 @@ FUTURE ROADMAP / TODOs
             content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
             background: var(--accent);
         }
-        .info-card h3 { font-family: var(--font-sans); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-faint); margin-bottom: 1rem; }
+        .info-card h3 { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-faint); margin-bottom: 1rem; }
         .bio-stats { list-style: none; }
-        .bio-stats li { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .bio-stats li { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 1rem; }
         
         /* ════════════════════════════════════════════════════════════════
            FEATURED POST & POST GRID
@@ -357,10 +356,10 @@ FUTURE ROADMAP / TODOs
         }
         .featured-content { padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
         .post-meta { display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center; }
-        .tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.2rem 0.6rem; border-radius: 100px; font-weight: 600; }
-        .featured-content h3 { font-size: 2rem; margin-bottom: 1rem; }
+        .tag { font-family: var(--font-heading); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.3rem 0.8rem; border-radius: 100px; font-weight: 700; }
+        .featured-content h3 { font-size: 2.2rem; margin-bottom: 1rem; }
         .featured-content p { color: var(--text-muted); margin-bottom: 2rem; }
-        .read-more { font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent); display: flex; align-items: center; gap: 0.5rem; }
+        .read-more { font-family: var(--font-heading); font-weight: 700; font-size: 1rem; color: var(--accent); display: flex; align-items: center; gap: 0.5rem; }
         .read-more:hover { text-decoration: underline; }
 
         /* Category Filter */
@@ -370,7 +369,8 @@ FUTURE ROADMAP / TODOs
         }
         .filter-bar::-webkit-scrollbar { display: none; }
         .filter-btn {
-            padding: 0.5rem 1rem; border: 1px solid var(--border); border-radius: 100px;
+            font-family: var(--font-heading); font-weight: 600; font-size: 1rem;
+            padding: 0.5rem 1.2rem; border: 1px solid var(--border); border-radius: 100px;
             color: var(--text-muted); cursor: pointer; transition: all 0.2s; white-space: nowrap;
         }
         .filter-btn:hover { border-color: var(--border-hi); color: var(--text); }
@@ -398,23 +398,12 @@ FUTURE ROADMAP / TODOs
             background: var(--bg-3);
         }
         .post-card .post-meta { margin-bottom: 1rem; }
-        .post-card h3 { font-size: 1.4rem; margin-bottom: 1rem; }
-        .post-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
+        .post-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        .post-card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 1.5rem; flex-grow: 1; }
         
         /* Grid Spans */
         .col-span-2 { grid-column: span 2; } /* For 3 items per row */
         .col-span-3 { grid-column: span 3; } /* For 2 items per row */
-
-        /* ════════════════════════════════════════════════════════════════
-           ADSENSE PLACEHOLDERS
-           ════════════════════════════════════════════════════════════════ */
-        .ad-placeholder {
-            width: 100%; min-height: 120px; background: var(--bg-3);
-            border: 1px dashed var(--border-hi); border-radius: 8px;
-            display: flex; align-items: center; justify-content: center;
-            margin: 2rem 0; color: var(--text-faint); font-family: var(--font-mono); font-size: 0.85rem;
-            text-align: center; padding: 1rem;
-        }
 
         /* ════════════════════════════════════════════════════════════════
            TOPICS & ABOUT & NEWSLETTER
@@ -428,6 +417,7 @@ FUTURE ROADMAP / TODOs
         }
         .topic-card:hover { background: var(--bg-2); }
         .topic-card svg { width: 24px; height: 24px; margin-bottom: 1rem; color: var(--accent); }
+        .topic-card h4 { font-family: var(--font-heading); font-size: 1.1rem; }
 
         .about-section {
             display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 6rem;
@@ -455,11 +445,11 @@ FUTURE ROADMAP / TODOs
         .newsletter-form { display: flex; gap: 0.5rem; }
         .newsletter-form input {
             flex-grow: 1; padding: 1rem; background: var(--bg-2); border: 1px solid var(--border);
-            border-radius: 4px; color: var(--text); font-size: 1rem;
+            border-radius: 4px; color: var(--text); font-size: 1.05rem; font-family: var(--font-body);
         }
         .newsletter-form button {
             background: var(--text); color: var(--bg); padding: 0 2rem; border-radius: 4px;
-            font-weight: 600; cursor: pointer; transition: opacity 0.2s;
+            font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; cursor: pointer; transition: opacity 0.2s;
         }
         .newsletter-form button:hover { opacity: 0.9; }
 
@@ -472,14 +462,14 @@ FUTURE ROADMAP / TODOs
         .footer-grid {
             display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 4rem;
         }
-        .footer-col h4 { font-family: var(--font-sans); font-size: 1rem; margin-bottom: 1.5rem; color: var(--text); }
+        .footer-col h4 { font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--text); }
         .footer-col ul { list-style: none; }
         .footer-col ul li { margin-bottom: 0.8rem; }
-        .footer-col ul a { color: var(--text-muted); transition: color 0.2s; }
+        .footer-col ul a { color: var(--text-muted); transition: color 0.2s; font-weight: 600; }
         .footer-col ul a:hover { color: var(--accent); }
         .footer-bottom {
             text-align: center; border-top: 1px solid var(--border); padding-top: 2rem;
-            color: var(--text-faint); font-size: 0.9rem;
+            color: var(--text-faint); font-size: 0.95rem; font-weight: 600;
         }
 
         /* ════════════════════════════════════════════════════════════════
@@ -494,7 +484,7 @@ FUTURE ROADMAP / TODOs
         .search-overlay.active { display: flex; opacity: 1; }
         .search-container { max-width: 600px; width: 100%; position: relative; }
         .search-input {
-            width: 100%; padding: 1.5rem; padding-left: 3.5rem; font-size: 1.5rem;
+            width: 100%; padding: 1.5rem; padding-left: 3.5rem; font-size: 1.5rem; font-family: var(--font-heading); font-weight: 600;
             background: var(--bg-2); border: 2px solid var(--border-hi); border-radius: 12px;
             color: var(--text); outline: none;
         }
@@ -507,8 +497,8 @@ FUTURE ROADMAP / TODOs
             padding: 1rem; border-bottom: 1px solid var(--border); cursor: pointer;
         }
         .search-result-item:hover { background: var(--bg-2); }
-        .search-result-item h4 { font-family: var(--font-sans); margin-bottom: 0.25rem; }
-        .search-result-item p { font-size: 0.85rem; color: var(--text-muted); }
+        .search-result-item h4 { font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.25rem; }
+        .search-result-item p { font-size: 0.9rem; color: var(--text-muted); }
 
         /* Post Reader Modal */
         .post-modal {
@@ -523,7 +513,7 @@ FUTURE ROADMAP / TODOs
             padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;
             border-bottom: 1px solid var(--border); z-index: 10;
         }
-        .modal-back { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--text-muted); }
+        .modal-back { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--text-muted); font-family: var(--font-heading); font-weight: 700; }
         .modal-back:hover { color: var(--text); }
         
         .modal-content {
@@ -532,12 +522,12 @@ FUTURE ROADMAP / TODOs
         .modal-header { margin-bottom: 3rem; text-align: center; }
         .modal-header h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem; }
         
-        .article-body { font-size: 1.15rem; line-height: 1.8; color: var(--text); }
-        .article-body p { margin-bottom: 1.5rem; }
-        .article-body h2 { font-size: 1.8rem; margin: 3rem 0 1rem; }
+        .article-body { font-size: 1.2rem; line-height: 1.8; color: var(--text); } /* Increased reading size */
+        .article-body p { margin-bottom: 1.6rem; }
+        .article-body h2 { font-size: 1.9rem; margin: 3rem 0 1rem; }
         .article-body blockquote {
             border-left: 4px solid var(--accent); padding-left: 1.5rem; font-style: italic;
-            color: var(--text-muted); margin: 2rem 0; font-family: var(--font-serif); font-size: 1.3rem;
+            color: var(--text-muted); margin: 2rem 0; font-family: var(--font-heading); font-size: 1.35rem; font-weight: 500;
         }
 
         /* Back to top */
@@ -641,18 +631,13 @@ FUTURE ROADMAP / TODOs
 
         <!-- Featured & Posts Area -->
         <section class="container">
-            <div class="section-header fade-in">
+            <!-- Added ID here so filtering scrolls up to show results -->
+            <div class="section-header fade-in" id="essays-section">
                 <h2>Featured Essay</h2>
             </div>
             
             <div id="featured-post-container" class="fade-in">
                 <!-- Injected via JS -->
-            </div>
-
-            <!-- AD PLACEMENT ZONE 1 (Placeholder) -->
-            <div class="ad-placeholder fade-in">[ AdSense Placement 1: Top of Content ]<br>
-                <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXX" data-ad-slot="XXXX" data-ad-format="auto"></ins>
-                <script>(adsbygoogle = window.adsbygoogle ||[]).push({});</script> -->
             </div>
 
             <div class="section-header fade-in" style="margin-top: 4rem;">
@@ -669,12 +654,6 @@ FUTURE ROADMAP / TODOs
 
             <div id="post-grid" class="post-grid fade-in">
                 <!-- Posts injected via JS -->
-            </div>
-
-            <!-- AD PLACEMENT ZONE 2 (Placeholder) -->
-            <div class="ad-placeholder fade-in">[ AdSense Placement 2: Bottom of Content ]<br>
-                <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXX" data-ad-slot="XXXX" data-ad-format="auto"></ins>
-                <script>(adsbygoogle = window.adsbygoogle ||[]).push({});</script> -->
             </div>
         </section>
 
@@ -765,8 +744,6 @@ FUTURE ROADMAP / TODOs
                 <div class="footer-col">
                     <div class="logo" style="margin-bottom: 1rem;">Anuj<span>.</span></div>
                     <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1.5rem;">An open notebook meant to last decades. Built in Kathmandu.</p>
-                    <!-- BUY ME A COFFEE PLACEHOLDER -->
-                    <!-- <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="anujbakhrel" data-description="Support me on Buy me a coffee!" data-message="" data-color="#D4A853" data-position="Right" data-x_margin="18" data-y_margin="18"></script> -->
                 </div>
                 <div class="footer-col">
                     <h4>Writing</h4>
@@ -837,12 +814,6 @@ FUTURE ROADMAP / TODOs
             <div class="article-body" id="modal-body">
                 <!-- Content injected -->
             </div>
-            
-            <!-- Affiliate / Monetization Placeholder -->
-            <div style="margin-top: 4rem; padding: 2rem; background: var(--bg-2); border-radius: 8px; border: 1px solid var(--border);">
-                <h4 style="margin-bottom: 1rem; font-family: var(--font-sans);">Enjoyed this essay?</h4>
-                <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 1rem;">Consider joining the free newsletter, or exploring my <a href="#" style="color: var(--accent); text-decoration: underline;">recommended reading list</a> (affiliate link placeholder).</p>
-            </div>
         </article>
     </div>
 
@@ -866,35 +837,12 @@ FUTURE ROADMAP / TODOs
                 views: '1.2k',
                 excerpt: 'How Eliyahu M. Goldratt’s manufacturing framework changed the way I look at studying, habits, and daily friction.',
                 content: `
-                   
-                    <p> TOC stands for Theory of Constraint. It explains every complex system or non-complex system as one, bottleneck or constraint. System refer to any human body, data center, manufacturing, or anything. The main principle is there is outflow and inflow within the system, and between them there is one bottleneck, which is the overall weakest point of the system. If the weakest point of the system is not fixed, the overall performance of the system cannot be increased. So we have to find the weakest point of the system in order to maximize the overall system output. This is known as bottleneck theory
-
-### **Bottle neck For me during Seeking skill-**
-
-| Inflow | Bottleneck | Output |
-| --- | --- | --- |
-| Youtube videos,website practice | Implementatiin,creation of own project  | Learned |
-
-system looks like this:
-
-**Learn something → [BOTTLENECK] → Build something with it → Compound skill**
-
-The bottleneck is not laziness. Based on what you described, it is one of these three — you need to identify which one is *actually* yours:
-
-**1. The blank page problem** — You finish learning and then freeze because you do not know what to build. No project idea comes, so nothing starts.
-
-**2. The perfectionism trap** — An idea comes but it feels too small, too basic, or "not good enough to build." So you go back to learning more instead of building.
-
-**3. The completion gap** — You start projects but abandon them 30–40% through because something feels hard or a new interesting topic appears.
-
-All three have same common root whose solution is-
-
-All three disappear with one rule:
-
-"What is the smallest possible thing I can make that proves I understood this?”
-
-> **Your first version of any project must be embarrassingly small.**
-></p>
+                    <p>In Industrial Engineering, there is a fundamental concept known as the Theory of Constraints (TOC), popularized by Eliyahu M. Goldratt in his seminal book <em>The Goal</em>. The premise is deceptively simple: every system, no matter how complex, is limited in achieving more of its goals by at least one constraint (or bottleneck). If you optimize anything other than the bottleneck, your efforts are entirely wasted.</p>
+                    <p>When I first learned this at Thapathali, I viewed it purely through the lens of assembly lines. If Machine A produces 10 parts an hour, and Machine B processes 5 parts an hour, upgrading Machine A to 20 parts an hour accomplishes absolutely nothing. The throughput of the entire system remains 5 parts. But recently, I started applying TOC to my personal life.</p>
+                    <h2>The Personal Bottleneck</h2>
+                    <p>Think about your study habits. You might buy the best highlighters, download the perfect Notion template, and use the Pomodoro technique flawlessly. But if your actual bottleneck is <em>sleep deprivation</em>, none of those productivity hacks matter. The sleep deficit restricts the throughput of your cognition.</p>
+                    <blockquote>"An hour saved at the non-bottleneck is a mirage." — Eliyahu M. Goldratt</blockquote>
+                    <p>To apply this to your life, follow the 5 Focusing Steps: First, identify your constraint (e.g., lack of deep focus time). Second, exploit it (make sure you use that limited focus time for the most critical tasks). Third, subordinate everything else to it. Fourth, elevate the constraint (train yourself to focus longer). Fifth, avoid inertia—once that constraint is broken, find the next one.</p>
                 `
             },
             {
@@ -1136,6 +1084,15 @@ All three disappear with one rule:
             } else {
                 featuredEl.innerHTML = '';
                 gridEl.innerHTML = '<p class="text-muted" style="grid-column: span 6; text-align: center; padding: 4rem 0;">No posts found in this category.</p>';
+            }
+
+            // Scroll to the essays section so the user sees the filtered results
+            const essaysSection = document.getElementById('essays-section');
+            if (essaysSection) {
+                // Smooth scroll to the top of the essays section
+                const yOffset = -80; // Offset for fixed navbar
+                const y = essaysSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
             }
         }
 
