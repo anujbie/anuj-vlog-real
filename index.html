@@ -570,7 +570,88 @@ FUTURE ROADMAP / TODOs
             #search-hint { display: inline !important; }
         }
     </style>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "awQGQV5tMfnGSqzUR",
+      });
+   })();
+</script>
+    <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+  (function () {
+    emailjs.init({
+      publicKey: "awQGQV5tMfnGSqzUR",
+    });
+  })();
+
+  async function sendWelcomeEmail(event) {
+    event.preventDefault();
+
+    const emailInput = document.getElementById("subscriber-email");
+    const nameInput = document.getElementById("subscriber-name");
+
+    const userEmail = emailInput.value;
+    const userName = nameInput.value || "Reader";
+
+    const templateParams = {
+      to_email: userEmail,
+      to_name: userName,
+      subject: "Welcome to Anuj’s Second Brain",
+
+      message: `
+Hey ${userName},
+
+Thank you for subscribing.
+
+This website is basically my digital notebook — a place where I document things I learn, think about, struggle with, and slowly understand over time.
+
+Most of the ideas here revolve around:
+- engineering
+- systems thinking
+- first principles
+- productivity
+- philosophy
+- and real-life observations
+
+I’m simply learning in public and building a long-term knowledge archive for myself — and now, you're part of that journey too.
+
+No spam. No unnecessary noise.
+
+Glad you're here.
+
+— Anuj Bakhrel
+anujbakhrel.com.np
+      `,
+    };
+
+    try {
+      await emailjs.send(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        templateParams
+      );
+
+      alert("Successfully subscribed!");
+
+      emailInput.value = "";
+      nameInput.value = "";
+
+    } catch (error) {
+      console.error("Email failed:", error);
+      alert("Something went wrong.");
+    }
+  }
+</script>
 </head>
+    
 <body>
 
     <!-- Reading Progress Bar -->
@@ -1295,7 +1376,7 @@ FUTURE ROADMAP / TODOs
                     right: 0;
                     background: var(--bg-2);
                     padding: 1.5rem 2rem;
-                    border-bottom: 1px solid var(--border);
+                    border-bottom: 1px solid var(--border)<;
                     gap: 1.5rem;
                     z-index: 99;
                 `;
