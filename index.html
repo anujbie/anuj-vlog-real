@@ -819,12 +819,11 @@ FUTURE ROADMAP / TODOs
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
     </div>
 
-    <!-- Botpress Webchat Integration -->
-    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-    <script src="https://files.bpcontent.cloud/2026/05/15/09/20260515093907-EBZGZKJV.js" defer></script>
-
     <script>
-        const posts = [
+        /* ═════════════════════════════════════════════════════════════██[...]
+           POST DATA (CMS Replacement)
+           ═════════════════════════════════════════════════════════════██[...]
+        const posts =[
             {
                 id: 'understanding-bottlenecks-toc',
                 title: 'Understanding Bottlenecks: The Theory of Constraints in Real Life',
@@ -834,7 +833,9 @@ FUTURE ROADMAP / TODOs
                 time: '6 min read',
                 views: '1.2k',
                 excerpt: 'How Eliyahu M. Goldratt's manufacturing framework changed the way I look at studying, habits, and daily friction.',
-                content: `<p>In Industrial Engineering, there is a fundamental concept known as the Theory of Constraints (TOC), popularized by Eliyahu M. Goldratt in his seminal book <em>The Goal</em>.</p>`
+                content: `
+                    <p>In Industrial Engineering, there is a fundamental concept known as the Theory of Constraints (TOC), popularized by Eliyahu M. Goldratt in his seminal book <em>The Goal</em>.</p>
+                `
             }
         ];
 
@@ -846,7 +847,7 @@ FUTURE ROADMAP / TODOs
         const progressBar = document.getElementById('progress-bar');
 
         function renderPosts() {
-            // Simple rendering function
+            // Rendering function
         }
 
         function filterCategory(cat) {
